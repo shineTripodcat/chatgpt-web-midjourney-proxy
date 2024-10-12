@@ -5,13 +5,13 @@ RUN npm install pnpm -g
 
 WORKDIR /app
 
-COPY./package.json /app
+COPY ./package.json /app
 
-COPY./pnpm-lock.yaml /app
+COPY ./pnpm-lock.yaml /app
 
 RUN pnpm install
 
-COPY. /app
+COPY . /app
 
 RUN pnpm run build
 
